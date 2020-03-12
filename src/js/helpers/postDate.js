@@ -16,7 +16,7 @@ function postDate() {
     var body = document.body,
         postLang = body.getAttribute('data-post-lang');
 
-    var sa = body.getAttribute('data-post-format') || 'dd/mm/yyyy',
+    var sa = body.getAttribute('data-post-format') || 'dd.mm.yyyy',
         msInDay = 86400000,
         counterLength = 90,  // Максимальна кількість вімотаних днів. Змінюємо за необхідності.
         months, 
