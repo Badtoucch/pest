@@ -3,7 +3,7 @@ body {
   min-height: 100vh;
   font-family: $main-font;
   font-size: 16px;
-  color: #555;
+  color: #332f2f;
 }
 
 body,
@@ -144,4 +144,8 @@ br{
 
 .section-bg {
   background-image: linear-gradient(to left, rgba(181, 181, 181, 0.5) 0%, rgba(244, 244, 244, 0.5) 50%, rgba(181, 181, 181, 0.5) 100%);
+}
+
+.text-green{
+  color: $color-green;
 }
