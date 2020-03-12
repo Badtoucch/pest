@@ -1,0 +1,20 @@
+extends settings/layout
+
+prepend html
+  - const lang = "ru";
+
+prepend head
+  - const pageTitle = "Купить Антипаразит недорого. Цены, отзывы. Закажите Антипаразит сейчас!";
+  - const themeColor = "#ffffff";
+
+append head
+
+append fonts
+  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,400i,500,700,900&display=swap&subset=cyrillic")
+
+append content
+  include components/people
+  include components/footer.html
+
+append scripts
+  script(src="https://179523.selcdn.ru/public/prod-scripts/cis_footer.js")

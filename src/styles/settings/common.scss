@@ -1,0 +1,147 @@
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: $main-font;
+  font-size: 16px;
+  color: #555;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  overflow: hidden;
+}
+
+button {
+  display: block;
+  padding: 0;
+}
+br{
+	line-height: 1;
+}
+.container {
+  width: 1220px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  @include r(1219) {
+    width: 1024px;
+  }
+
+  @include r(1023) {
+    width: 768px;
+    padding: 0 10px;
+  }
+
+  @include r(767) {
+    width: 640px;
+  }
+
+  @include r(639) {
+    width: 480px;
+  }
+
+  @include r(479) {
+    width: 100%;
+  }
+}
+
+.title {
+  font-size: 55px;
+  font-weight: 900;
+  line-height: 1;
+  color: #332f2f;
+  text-align: center;
+
+  @include r(1219) {
+    font-size: 40px;
+  }
+
+  @include r(1023) {
+    font-size: 38px;
+  }
+
+  @include r(767) {
+    font-size: 34px;
+  }
+
+  @include r(639) {
+    font-size: 30px;
+  }
+
+  @include r(479) {
+    font-size: 26px;
+  }
+}
+
+.subtitle {
+  margin-top: 32px;
+  text-align: center;
+  color: #444;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+
+  @include r(1219) {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+
+  @include r(1023) {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  @include r(767) {
+    font-size: 19px;
+  }
+
+  @include r(639) {
+    font-size: 18px;
+  }
+
+  @include r(479) {
+    font-size: 17px;
+    margin-top: 5px;
+  }
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-black {
+  font-weight: 900;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.accent {
+  color: #729d22;
+}
+
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.section-bg {
+  background-image: linear-gradient(to left, rgba(181, 181, 181, 0.5) 0%, rgba(244, 244, 244, 0.5) 50%, rgba(181, 181, 181, 0.5) 100%);
+}

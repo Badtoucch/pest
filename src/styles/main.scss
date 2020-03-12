@@ -1,0 +1,10 @@
+// основные настройки
+@import "settings/index";
+// библиотеки
+@import "libs/index";
+// компоненты
+
+@import "components/people";
+@import "components/footer";
+// паддинг секций (импортируем последним для правильного каскадирования стилей)
+@import "settings/padding";
