@@ -1,0 +1,25 @@
+.top-banner {
+  padding: 10px 0;
+  color: #ffffff;
+  background-color: #fe3333;
+
+  &__text {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.3;
+
+    @include r(639) {
+      font-size: 16px;
+    }
+
+    @include r(479) {
+      font-size: 13px;
+    }
+  }
+}
+
+.top-banner__accent {
+	color: #ffe400;
+	font-weight: 700;
+	letter-spacing: 0.22px;
+}
