@@ -1,0 +1,125 @@
+.form{
+    width: 270px;
+    position: relative;
+
+    &__wrapper{
+        padding: 30px 23px 40px;
+        position: relative;
+        border-radius: 5px;
+        border: 2px solid #729d22;
+        background-color: #ffffff;
+    }
+
+    &__image{
+        position: absolute;
+        top: -40px;
+        right: -35px;
+
+        @include r(479) {
+            right: -20px;
+        }
+    }
+
+    &__action{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 24.59px;
+        letter-spacing: -0.85px;
+    }
+
+    &__title{
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 23px;
+        text-align: center;
+    }
+
+    &__subtitle{
+        margin: 15px 0 15px -4px;
+        font-size: 17px;
+        line-height: 22px;
+        text-align: center;
+        width: 104%;
+
+        span.free{
+            color: #eb1d26;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+
+    &__name,
+    &__phone{
+        margin-bottom: 15px;
+        position: relative;
+
+        img{
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__btn{
+        font-size: 17px;
+        line-height: 22px;
+        padding: 10px 38.5px 5px;
+        margin: 5px 0 0;
+
+        span{
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+
+    &__text{
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    &__amount-packs{
+        color: #eb1d26;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    &__attention{
+        opacity: 0.7;
+        color: #1f1f1f;
+        font-size: 15px;
+        line-height: 16.52px;
+        text-align: center;
+        margin: 8px 0 15px;
+    }
+
+    &__left{
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 18px;
+        background-color: #729d22;
+        text-align: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 12px 0;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    & .price {
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 0;
+    }
+}

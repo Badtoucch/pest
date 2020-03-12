@@ -1,0 +1,34 @@
+.form
+    .form__wrapper
+        .form__image
+            img(src="img/form_img.png", alt="image")
+            .form__action Акция
+        .form__title Внимание! 
+        .form__subtitle Только сегодня 
+            span.date-0(data-format="dd month") 22 октября 
+            span.free  БЕСПЛАТНО!*
+        form.x_order_form(action="/submit", method="post")
+            .form__name
+                img(src="img/form_name_icon.png", alt="image")
+                input.input(type="text", name="name", placeholder="Мое имя", required)
+            .form__phone
+                img(src="img/form_phone_icon.png", alt="image")
+                input.input(type="tel", name="phone", placeholder="Мой телефон", required)
+            button.btn.form__btn
+                span.text-bold Получить 
+                | бесплатно
+        .form__attention *при оформлении заказа
+        .form__text За 
+            span.date-1 21.10.2019
+            |  заказано 
+            span.form__amount-packs 3456 упаковок
+    .form__left Осталось 
+        span.lastpack 80
+        |  упаковок
+    .price
+        p Старая цена: 
+            span.x_price_previous 322 
+            span.x_currency грн
+        p Новая цена: 
+            span.x_price_current 228 
+            span.x_currency грн
