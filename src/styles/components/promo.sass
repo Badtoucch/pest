@@ -1,0 +1,212 @@
+.promo
+	background-color: #f4f4f4
+	padding-top: 44px
+	+r(1023)
+		padding-top: 40px
+		padding-bottom: 40px
+	+r(767)
+		padding: 30px 0
+	+r(479)
+		padding: 25px 0
+	&-content
+		display: flex
+		justify-content: flex-end
+		position: relative
+		+r(1023)
+			justify-content: center
+			flex-wrap: wrap
+			align-items: center
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: -142px
+			width: 582px
+			height: 627px
+			background: url(../img/promo-girl.png) no-repeat center
+			background-size: contain
+			+r(1219)
+				left: -154px
+				width: 535px
+				height: 577px
+			+r(1023)
+				display: none
+	&__title
+		color: #729d22
+		font-weight: 900
+		position: relative
+		top: -9px
+		left: -5px
+		+rm(1024)
+			text-align: left
+			font-size: 51px
+		+rm(1220)
+			line-height: 1
+			font-size: 65px
+		+r(1219)
+			top: 0
+			left: 0
+	&__subtitle 
+		color: #332f2f
+		font-family: Roboto
+		font-size: 33px
+		font-weight: 700
+		line-height: 38px
+		+r(1219)
+			font-size: 24px
+			line-height: normal
+			margin-top: 15px
+		+r(1023)
+			text-align: center
+			margin-top: 7px
+			font-size: 22px
+		+r(767)
+			font-size: 20px
+		+r(479)
+			font-size: 19px
+	&__info
+		max-width: 405px
+		margin-right: 26px
+		+r(1219)
+			margin-right: 18px
+		+r(1023)
+			width: 100%
+			display: block
+			order: 1
+			max-width: 100%
+	&-list
+		margin-top: 45px
+		+r(1219)
+			margin-top: 26px
+		+r(1023)
+			margin-top: 15px
+			display: flex
+			justify-content: space-between
+		+r(639)
+			flex-direction: column
+			max-width: 250px
+			margin-left: auto
+			margin-right: auto
+		&__item
+			padding-left: 60px
+			color: #353434
+			font-size: 22px
+			font-weight: 700
+			line-height: 25px
+			position: relative
+			+r(1023)
+				font-size: 19px
+				line-height: normal
+				padding-left: 54px
+			+r(767)
+				padding-left: 0
+				padding-top: 40px
+				text-align: center
+			+r(639)
+				padding-left: 45px
+				padding-top: 0
+				text-align: left
+			&::before
+				content: ''
+				position: absolute
+				top: 3px
+				left: 1px
+				background: url(../img/check.png) no-repeat center
+				width: 42px
+				height: 42px
+				+r(1023)
+					top: 0
+				+r(767)
+					left: 50%
+					transform: translateX(-50%)
+					top: 0
+					width: 36px
+					height: 36px
+					background-size: contain
+				+r(639)
+					left: 0
+					transform: none
+					top: 0
+			&:not(:last-child)
+				margin-bottom: 29px
+				+r(1023)
+					margin-bottom: 0
+				+r(639)
+					margin-bottom: 15px
+			&--small 
+				color: #848383
+				font-size: 18px
+				font-weight: 400
+				display: block
+				+r(1023)
+					font-size: 16px
+	&__quality 
+		margin-top: 42px
+		margin-bottom: 35px
+		+r(1219)
+			margin-bottom: 50px
+		+r(1023)
+			position: relative
+			margin-bottom: -150px
+			margin-left: 100px
+		+r(767)
+			margin-left: 30px
+			margin-top: 110px
+		+r(639)
+			margin-top: 15px
+			margin-left: 0
+			margin-right: 0
+			margin-bottom: 0
+			display: flex
+			justify-content: center
+	&-product
+		position: relative
+		width: 438px
+		margin-right: 25px
+		+r(1219)
+			margin-right: 10px
+			width: 100%
+		+r(1023)
+			width: auto
+			order: 2
+			margin-right: 25px
+			margin-top: 35px
+		+r(767)
+			margin-right: 15px
+			margin-top: 90px
+		+r(639)
+			margin-top: 20px
+			margin-right: 0
+			margin-bottom: 30px
+		&__pack
+			position: absolute
+			bottom: -112px
+			right: 3px
+			+r(1219)
+				bottom: -70px
+			+r(1023)
+				position: static
+			+r(767)
+				width: 333px
+			&::before
+				content: ''
+				position: absolute
+				top: -48px
+				left: 50%
+				transform: translateX(-42%)
+				background: url(../img/quality-pack.png) no-repeat center
+				width: 105px
+				height: 105px
+				border-radius: 50%
+				+r(1219)
+					width: 90px
+					height: 90px
+					background-size: contain
+				+r(1023)
+					top: auto
+					bottom: 0
+				+r(767)
+					width: 75px
+					height: 75px
+	&__form
+		order: 3

@@ -1,0 +1,181 @@
+.menu__button {
+  display: none;
+  position: absolute;
+  top: 75px;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  border-radius: 100px;
+  background-color: #529e29;
+  cursor: pointer;
+  transition: all .3s;
+  z-index: 100;
+
+  &:hover {
+    border: 2px solid #529e29;
+    background-color: #fff;
+
+    .menu__line,
+    .menu__line::before,
+    .menu__line::after {
+      background-color: #529e29;
+
+    }
+  }
+
+  @include r(1023) {
+    display: flex;
+	}
+	@include r(479) {
+    top: 80px;
+  }
+}
+
+.menu__line {
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  transition: all .3s;
+}
+
+.menu__line::before,
+.menu__line::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 20px;
+  background-color: #fff;
+  transition: all .3s;
+}
+
+.menu__line::before {
+  bottom: -7px;
+  left: 0;
+}
+
+.menu__line::after {
+  bottom: 7px;
+  left: 0;
+}
+
+.menu__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 110;
+}
+.menu__timer{
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+	br{
+		display: none;
+	}
+	.timer__title{
+		margin-bottom: 5px;
+	}
+}
+.menu__wrapper {
+  // display: none;
+  padding: 20px;
+  max-width: 320px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #faeef3;
+  transform: translateX(-100%);
+  transition: all .5s;
+  z-index: 115;
+
+  &.active {
+    top: 0;
+    left: 0;
+    position: fixed;
+    transform: translateX(0);
+    z-index: 115;
+    transition: all .5s;
+  }
+}
+
+.menu__close {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+
+    &::before,
+    &::after {
+      background-color: red;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: #000000;
+    transition: all .2s;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.menu__timer {
+  text-align: center;
+}
+
+.menu {
+  .header__info {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .info__item:nth-child(1) .info__icon {
+    margin-right: 10px;
+  }
+
+  .info__item:nth-child(2) .info__icon {
+    margin-right: 17px;
+  }
+
+  // .info__item:not(:last-of-type) {
+  //   margin-bottom: 10px;
+  //   border-right: none;
+  // }
+
+  .info__text br {
+    display: none;
+  }
+}
+
+.menu__btn {
+  max-width: 220px;
+  margin: 0 auto;
+}

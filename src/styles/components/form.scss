@@ -12,9 +12,11 @@
 
     &__image{
         position: absolute;
-        top: -40px;
+        top: -36px;
         right: -35px;
-
+				@include r(1245) {
+					right: -18px;
+			}
         @include r(479) {
             right: -20px;
         }
@@ -45,7 +47,7 @@
         line-height: 22px;
         text-align: center;
         width: 104%;
-
+			color: #222;
         span.free{
             color: #eb1d26;
             font-size: 18px;
@@ -68,8 +70,6 @@
 
     &__btn{
         font-size: 17px;
-        line-height: 22px;
-        padding: 10px 38.5px 5px;
         margin: 5px 0 0;
 
         span{
@@ -112,7 +112,28 @@
         bottom: 0;
         position: absolute;
         width: 100%;
-    }
+		}
+		&__lock{
+			color: rgba(34, 34, 34, 0.7);
+			font-size: 15px;
+			line-height: 1;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			max-width: 270px;
+			width: 100%;
+			margin-top: 15px;
+			
+			&:before{
+				content: '';
+				display: inline-block;
+				background: url(../img/lock.png) no-repeat center;
+				width: 22px;
+height: 24px;
+margin-right: 14px;
+			}
+		}
 
     & .price {
         position: absolute;
@@ -122,4 +143,21 @@
         height: 0;
         width: 0;
     }
+}
+.form-btn{
+	margin-top: 19px;
+}
+
+::-webkit-input-placeholder { 
+	color: #666666;
+
+}
+::-moz-placeholder { 
+	color: #666666;
+}
+:-ms-input-placeholder { 
+	color: #666666;
+}
+::placeholder { 
+	color: #666666;
 }

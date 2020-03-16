@@ -3,17 +3,17 @@
 position: relative;
 z-index: 5;
   &__wrap {
-    margin-bottom: 15px;
-    padding: 17px 0 14px;
+    padding: 17px 0 20px;
     display: flex;
     align-items: center;
 
     @include r(1219) {
-      justify-content: space-between;
+			justify-content: space-between;
+			padding-bottom: 17px;
     }
 
     @include r(1023) {
-      margin-bottom: 30px;
+     
       justify-content: space-around;
     }
 
@@ -22,7 +22,6 @@ z-index: 5;
     }
 
     @include r(479) {
-      margin-bottom: 15px;
       flex-direction: column;
     }
   }
@@ -36,12 +35,24 @@ align-items: center;
     display: none;
   }
 }
+.header__timer{
+	display: flex;
+	align-items: center;
+	.timer__title{
+		margin-right: 19px;
+	}
+}
 
 .header__logo {
-  margin-right: auto;
+	margin-right: auto;
+	color: #729d22;
+font-size: 28px;
+font-weight: 700;
+line-height: 1;
 
   @include r(1219) {
-    margin-right: 0;
+		margin-right: 0;
+		font-size: 24px;
   }
 
   @include r(479) {
@@ -52,11 +63,15 @@ align-items: center;
 .header__btn {
   max-width: 140px;
   height: 40px;
-  margin-left: 22px;
-  border-radius: 10px;
+  margin-left: 26px;
+  border-radius: 5px;
   font-size: 18px;
-	border-bottom: 2px solid #e36622;
+	border-bottom: 2px solid #c52128;
+	box-shadow: inset 0 0 4px rgba(251, 109, 22, 0.48);
   @include r(1219) {
+    margin-left: 10px;
+	}
+	@include r(479) {
     margin-left: 0px;
   }
 }
@@ -66,16 +81,35 @@ align-items: center;
 .info__link {
   display: flex;
   align-items: center;
-  color: #444444;
+  color: #222;
 }
 
 .info__link:hover {
-  text-decoration: underline;
+ text-decoration: none;
+ .info__text:before{
+	 opacity: 0;
+ }
+}
+
+.info__item, .info__text {
+	position: relative;
+}
+.info__text:before {
+	content: '';
+	position: absolute;
+	width: 99%;
+	height: 2px;
+	bottom: -1px;
+	left: 2px;
+	background: url(../img/point.png) repeat-x left center;
+	background-size: 5px 5px;
+	-webkit-transition: .3s;
+	transition: .3s;
 }
 
 .info__item:not(:last-of-type) {
-  padding-right: 49px;
-  margin-right: 48px;
+  padding-right: 41px;
+  margin-right: 37px;
 	&:before{
 		content: '';
 		position: absolute;
