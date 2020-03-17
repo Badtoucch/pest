@@ -1,0 +1,204 @@
+.simile
+	padding: 88px 0 102px
+	&-list
+		margin-top: 94px
+		display: flex
+		justify-content: space-between
+		+r(1023)
+			margin-top: 78px
+		+r(767)
+			flex-direction: column
+	&-item
+		width: 48.72%
+		position: relative
+		padding-top: 91px
+		padding-left: 64px
+		padding-right: 70px
+		padding-bottom: 41px
+		+r(1219)
+			padding-left: 30px
+			padding-right: 30px
+			br
+				display: none
+		+r(1023)
+			padding-top: 67px
+			padding-bottom: 15px
+		+r(767)
+			width: 100%
+		+r(479)
+			padding-left: 20px
+			padding-right: 20px
+		.simile-br
+			+r(1219)
+				display: block
+			+r(767)
+				display: none
+		&__prod
+			background-color: #f4f4f4
+		&__title 
+			text-align: center
+			color: #353434
+			font-size: 30px
+			font-weight: 700
+			line-height: 1
+			margin-bottom: 11px
+			+r(1023)
+				font-size: 24px
+			+r(767)
+				margin-bottom: 5px
+	&-product
+		&__item
+			padding: 20px 0
+			color: #353434
+			font-size: 18px
+			font-weight: 500
+			margin-left: 61px
+			line-height: 24px
+			position: relative
+			+r(1219)
+				padding: 14px 0
+			+r(1023)
+				margin-left: 50px
+			+r(767)
+				font-size: 18px
+				line-height: normal
+			&:not(:last-child)
+				border-bottom: 1px solid #e2e1e1
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: -61px
+				background: url(../img/check.png) no-repeat center / contain
+				width: 37px
+				height: 37px
+				+r(1023)
+					left: -50px
+					transform: none
+					top: 18px
+	&-other
+		&__item
+			color: #555555
+			margin-left: 40px
+			&::before
+				height: 18px
+				width: 18px
+				background: url(../img/cross.png) no-repeat center / contain
+				left: -40px
+				transform: translateY(-99%)
+				+r(1023)
+					transform: none
+		&-box
+			padding-left: 57px
+			padding-right: 21px
+			+r(1219)
+				padding-left: 30px
+			+r(767)
+				margin-top: 50px
+			+r(479)
+				padding-left: 0
+				padding-right: 0
+				padding-bottom: 0
+				
+				
+	&-pack
+		width: 133px
+		height: 133px
+		border-radius: 50%
+		position: absolute
+		top: -68px
+		left: 50%
+		transform: translateX(-50%)
+		background: url(../img/pack.png) no-repeat 23% 50% #729d22
+		background-size: 105px
+		+r(1023)
+			width: 100px
+			height: 100px
+			top: -50px
+			background-size: 80px
+	&-other-pack
+		width: 54px
+		height: 90px
+		background: url(../img/other-puck.png) no-repeat center
+		position: absolute
+		top: -24px
+		left: 50%
+		transform: translateX(1%)
+		+r(1023)
+			background-size: contain
+			width: 43px
+			height: 72px
+		+r(767)
+			transform: translateX(-50%)
+	&-sert
+		margin-top: 62px
+		display: flex
+		justify-content: space-between
+		max-width: 568px
+		margin-left: auto
+		margin-right: auto
+		padding: 0 19px 14px
+		position: relative
+		z-index: 0
+		+r(1219)
+			margin-top: 50px
+		+r(1023)
+			margin-top: 32px
+		+r(767)
+			margin-top: 25px
+		+r(639)
+			margin-top: 0px
+			justify-content: center
+			padding: 0
+		+r(479)
+			margin-top: 5px
+		img
+			+r(639)
+				margin: 5px
+			+r(479)
+				width: 31%
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			background: url(../img/sert-bottom.svg) no-repeat center
+			width: 100%
+			height: 20px
+			background-size: contain
+			z-index: -1
+			+r(639)
+				display: none
+
+.simile-item__prod:before, .simile-item__prod:after, .simile-border:after, .simile-border:before
+	position: absolute
+	width: 100px
+	height: 100px
+	content: ''
+	border-color: #729d22
+	border-style: solid
+.simile-border
+	position: absolute
+	left: 0px
+	top: 0px
+	right: 0px
+	bottom: 0px
+	width: 100%
+	height: 100%
+.simile-item__prod:before
+	left: -2px
+	top: -2px
+	border-width: 2px 0 0 2px
+.simile-item__prod:after
+	right: -2px
+	top: -2px
+	border-width: 2px 2px 0 0
+.simile-border:after
+	bottom: -2px
+	left: -2px
+	border-width: 0 0 2px 2px 
+.simile-border:before
+	bottom: -2px
+	right: -2px
+	border-width: 0 2px  2px 0

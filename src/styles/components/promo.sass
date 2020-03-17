@@ -29,6 +29,10 @@
 				left: -154px
 				width: 535px
 				height: 577px
+			+r(1110)
+				left: -127px
+				width: 513px
+				height: 554px
 			+r(1023)
 				display: none
 	&__title
@@ -74,6 +78,7 @@
 			display: block
 			order: 1
 			max-width: 100%
+			margin-right: 0
 	&-list
 		margin-top: 45px
 		+r(1219)
@@ -81,7 +86,7 @@
 		+r(1023)
 			margin-top: 15px
 			display: flex
-			justify-content: space-between
+			justify-content: center
 		+r(639)
 			flex-direction: column
 			max-width: 250px
@@ -131,8 +136,10 @@
 				margin-bottom: 29px
 				+r(1023)
 					margin-bottom: 0
+					margin-right: 15px
 				+r(639)
 					margin-bottom: 15px
+					margin-right: 0
 			&--small 
 				color: #848383
 				font-size: 18px
@@ -147,11 +154,12 @@
 			margin-bottom: 50px
 		+r(1023)
 			position: relative
-			margin-bottom: -150px
 			margin-left: 100px
+			margin-bottom: -85px
 		+r(767)
 			margin-left: 30px
 			margin-top: 110px
+			margin-bottom: -150px
 		+r(639)
 			margin-top: 15px
 			margin-left: 0
@@ -188,6 +196,9 @@
 				position: static
 			+r(767)
 				width: 333px
+			+r(479)
+				width: 100%
+				max-width: 320px
 			&::before
 				content: ''
 				position: absolute
