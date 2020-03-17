@@ -1,0 +1,108 @@
+.composition
+	padding: 117px 0 94px
+	&__subtitle
+		margin-top: 29px
+		color: #332f2f
+		font-size: 26px
+		font-weight: 500
+		line-height: 30px
+		text-align: center
+		max-width: 910px
+		margin-left: auto
+		margin-right: auto
+		+r(1219)
+			margin-top: 15px
+			font-size: 22px
+			line-height: normal
+			max-width: 800px
+		+r(1023)
+			font-size: 20px
+			margin-top: 10px
+		+r(767)
+			font-size: 18px
+		+r(479)
+			margin-top: 5px
+			font-size: 17px
+	&-list
+		margin-top: 20px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		+r(1219)
+			margin-top: 15px
+		+r(1023)
+			margin-top: 8px
+		+r(479)
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin-top: 0px
+	&-item
+		margin-top: 36px
+		width: 32%
+		padding-top: 289px
+		background-position: -12% 0
+		background-repeat: no-repeat
+		+r(1219)
+			margin-top: 30px
+			padding-top: 280px
+		+r(1023)
+			background-size: 190px
+			padding-top: 200px
+		+r(767)
+			width: 48%
+			text-align: center
+			background-position: center top
+		+r(479)
+			width: 100%
+			max-width: 270px
+		&__name
+			color: #353434
+			font-size: 22px
+			font-weight: 900
+			line-height: 1
+			+r(1219)
+				font-size: 21px	
+			+r(1023)
+				font-size: 19px
+		&__description
+			margin-top: 7px
+			color: #848383
+			font-size: 18px
+			line-height: 24px
+			+r(1219)
+				font-size: 17px
+				line-height: normal
+			+r(1023)
+				font-size: 16px
+				margin-top: 5px
+				br
+					display: none
+	&__img-1
+		background-image: url(../img/composition-1.png)
+		+r(479)
+			padding-top: 185px
+	&__img-2
+		background-image: url(../img/composition-2.png)
+	&__img-3
+		background-image: url(../img/composition-3.png)
+		+r(479)
+			padding-top: 202px
+	&__img-4
+		background-image: url(../img/composition-4.png)
+		+r(767)
+			background-size: 205px
+		+r(479)
+			padding-top: 195px
+	&__img-5
+		background-image: url(../img/composition-5.png)
+		+r(767)
+			background-size: 215px
+		+r(479)
+			padding-top: 190px
+	&__img-6
+		background-image: url(../img/composition-6.png)
+		+r(767)
+			background-size: 215px
+		+r(479)
+			padding-top: 180px
