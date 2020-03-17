@@ -1,0 +1,112 @@
+.infection
+	padding: 171px 0 94px
+	&-list
+		margin-top: 51px
+		+r(1023)
+			margin-top: 30px
+		+r(479)
+			margin-top: 20px
+	&-item
+		margin: 16px 15px 0
+		+r(1219)
+			margin: 16px 10px
+		&__img
+			max-width: 270px
+			position: relative
+			margin-left: auto
+			margin-right: auto
+			+r(400)
+				max-width: 230px
+			+r(360)
+				max-width: 200px
+			&::before
+				content: ''
+				position: absolute
+				left: 50%
+				top: -16px
+				transform: translateX(-50%)
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				background: url(../img/infected-icon.png) no-repeat center #d6123c
+		&__name
+			margin-top: 30px
+			color: #332f2f
+			font-size: 22px
+			font-weight: 700
+			line-height: 26px
+			text-align: center
+			+r(1219)
+				margin-top: 15px
+				font-size: 19px
+				line-height: normal
+			+r(1023)
+				margin-top: 10px
+				font-size: 18px
+	&__thesis
+		margin-top: 44px
+		color: #666666
+		font-style: italic
+		font-size: 18px
+		line-height: 1
+		text-align: center
+		position: relative
+		max-width: 910px
+		margin-left: auto
+		margin-right: auto
+		+r(1219)
+			margin-top: 24px
+			font-size: 17px
+			max-width: 880px
+		+r(1023)
+			margin-top: 5px
+		+r(479)
+			margin-top: 0
+		&--star
+			color: #d6123c
+			font-size: 20px
+		&:after, &::before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			width: 169px
+			height: 1px
+			background-color: #d9d9d9
+			+r(1023)
+				width: 116px
+			+r(767)
+				display: none
+		&:after
+			right: 0
+		&:before
+			left: 0
+			
+.arrow-left, .arrow-right
+	fill: #d7d7d7
+	transition: .2s
+	position: absolute
+	cursor: pointer
+	top: 137px
+	+r(1330)
+		top: -20px
+	+r(479)
+		top: 130px
+	+r(400)
+		top: 110px
+	+r(360)
+		top: 100px
+	&:hover
+		fill: #729d22
+.arrow-left
+	left: -70px
+	+r(1330)
+		left: 0
+.arrow-right
+	right: -70px
+	+r(1330)
+		right: 0
+.slick-list
+	margin: 0 -15px
+	+r(1219)
+		margin: 0 -10px
