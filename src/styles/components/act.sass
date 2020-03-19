@@ -1,0 +1,85 @@
+.act
+	padding: 28px 0 23px
+	background-color: #efefef
+	&-content
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+r(767)
+			flex-direction: column
+	&__title
+		color: #222222
+		font-size: 19px
+		line-height: 23px
+		max-width: 275px
+		margin-left: -6px
+		margin-right: 17px
+		width: 100%
+		+r(1219)
+			margin-left: 0
+			margin-right: 5px
+			font-size: 17px
+			max-width: 244px
+		+r(1023)
+			max-width: 306px
+		+r(767)
+			text-align: center
+			order: 1
+			font-size: 19px
+			margin-right: 0
+			margin-bottom: 10px
+			max-width: 340px
+		&--accent
+			color: #eb1d26
+			font-weight: 900
+			text-transform: uppercase
+	&__btn
+		max-width: 240px
+		margin-left: 35px
+		+r(1219)
+			max-width: 220px
+			margin-left: 15px
+		+r(767)
+			order: 3
+			margin-left: 0
+			margin-top: 20px
+	&__timer
+		display: flex
+		align-items: center
+		+r(1219)
+			flex-direction: column
+		+r(1023)
+			display: none
+		.timer__title
+			max-width: 130px
+			width: 100%
+			margin-right: 20px
+			+r(1219)
+				max-width: 100%
+				text-align: center
+				margin-right: 0
+				margin-bottom: 10px
+				br
+					display: none
+	&__pack
+		max-width: 159px
+		position: relative
+		top: 12px
+		left: -13px
+		+r(767)
+			order: 2
+			max-width: 270px
+		.form__image
+			top: -31px
+			right: auto
+			left: 50%
+			transform: translateX(-36%)
+			width: 60px
+			height: 60px
+			+r(767)
+				transform: none
+				left: auto
+				right: 0
+				top: 0
+		.form__action
+			font-size: 15px

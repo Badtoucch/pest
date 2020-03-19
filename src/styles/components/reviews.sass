@@ -1,0 +1,190 @@
+.reviews
+	padding: 108px 0 100px
+	&-content
+		margin-top: 50px
+		+r(1219)
+			margin-top: 40px
+		+r(1023)
+			margin-top: 30px
+		+r(767)
+			margin-top: 20px
+		+r(639)
+			max-width: 320px
+			margin-left: auto
+			margin-right: auto
+	&-item
+		border-radius: 8px
+		background-color: #f8f8f8
+		padding: 30px 15px 44px 20px
+		margin-bottom: 17px
+		margin-left: 15px
+		margin-right: 15px
+		position: relative
+		height: auto
+		+r(1219)
+			margin-left: 10px
+			margin-right: 10px
+		+r(1023)
+			padding-top: 25px
+		+r(767)
+			padding-bottom: 15px
+		+r(639)
+			height: 100%
+			margin-bottom: 0
+		&__img
+			margin-right: 21px
+			img
+				border-radius: 50%
+		&-top
+			display: flex
+			align-items: center
+		&__name
+			color: #353434
+			font-size: 22px
+			font-weight: 700
+		&__age
+			margin-top: 5px
+			font-size: 17px
+			font-weight: 500
+		&__text
+			margin-top: 27px
+			color: #666666
+			font-size: 17px
+			line-height: 26px
+			overflow: hidden
+			max-height: 210px
+			transition: .2s
+			+r(1219)
+				max-height: 260px
+			+r(1023)
+				max-height: 205px
+			+r(767)
+				max-height: 264px
+				letter-spacing: -0.1px
+			+r(639)
+				max-height: 800px
+		&__btn
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			background-color: #729d22
+			box-shadow:  1.5px   1.5px 0  #608719
+			position: absolute
+			bottom: -12px
+			left: 50%
+			cursor: pointer
+			transform: translateX(-50%)
+			transition: .2s
+			+r(639)
+				display: none
+			&::before, &:after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 12px
+				height: 2px
+				background-color: #fff
+				transition: .2s
+			&::after
+				height: 12px
+				width: 2px
+			&:hover
+				background-color: #8ec030
+				box-shadow:  1.5px   1.5px 0  #75a31e
+	&__subtitle
+		color: #332f2f
+		font-size: 28px
+		font-weight: 500
+		line-height: 32px
+		text-align: center
+		margin-top: 98px
+		+r(1219)
+			margin-top: 90px
+			font-size: 26px
+			line-height: normal
+		+r(1023)
+			margin-top: 70px
+			font-size: 24px
+		+r(767)
+			margin-top: 60px
+			font-size: 22px
+		+r(639)
+			margin-top: 20px
+			font-size: 20px
+	&__btn
+		max-width: 290px
+		margin-top: 30px
+		margin-left: auto
+		margin-right: auto
+		font-size: 27px
+		padding: 19px 0
+		+r(1219)
+			margin-top: 25px
+		+r(1023)
+			padding: 15px 0
+			margin-top: 20px
+		+r(767)
+			margin-top: 15px
+		+r(767)
+			max-width: 280px
+			font-size: 25px
+	// .slick-track
+	// 	display: flex
+	.slick-dots li
+		width: 24px
+		height: 24px
+		border: 1px solid #fff
+		background-color: #ffffff
+		border-radius: 50%
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			background-color: #e8e7e7
+			width: 12px
+			height: 12px
+			border-radius: 50%
+	.slick-dots li.slick-active
+		border: 1px solid #dedede
+		&::before
+			background-color: #d6123c
+	.slick-dots
+		bottom: -50px
+		+r(767)
+			bottom: -40px
+	.arrow-left, .arrow-right
+		top: 50%
+		transform: translateY(-50%)
+		+r(1330)
+			transform: none
+			top: 100px
+			z-index: 5
+		+r(1023)
+			top: 95px
+	.arrow-right
+		+r(1330)
+			right: 10px
+	.arrow-left
+		+r(1330)
+			left: 10px
+.text-open
+	.reviews-item__text
+		max-height: 800px
+	.reviews-item__btn::after
+		opacity: 0
+.rev--full
+	height: 381px
+	+r(1219)
+		height: 431px
+	+r(1023)
+		height: 371px
+	+r(767)
+		height: 401px
+	+r(639)
+		height: auto
+	.reviews-item__btn
+		display: none
