@@ -1,6 +1,10 @@
 .act
 	padding: 28px 0 23px
 	background-color: #efefef
+	+rm(1024)
+		padding: 40px 0 !important
+	+rm(1220)
+		padding: 28px 0 23px !important
 	&-content
 		display: flex
 		justify-content: space-between
@@ -22,9 +26,10 @@
 			max-width: 244px
 		+r(1023)
 			max-width: 306px
+			text-align: center
+			margin-bottom: 6px
 		+r(767)
 			text-align: center
-			order: 1
 			font-size: 19px
 			margin-right: 0
 			margin-bottom: 10px
@@ -49,12 +54,26 @@
 		+r(1219)
 			flex-direction: column
 		+r(1023)
-			display: none
+			flex-direction: row
+		+r(479)
+			flex-direction: column
 		.timer__title
 			max-width: 130px
 			width: 100%
 			margin-right: 20px
 			+r(1219)
+				max-width: 100%
+				text-align: center
+				margin-right: 0
+				margin-bottom: 10px
+				br
+					display: none
+			+r(1023)
+				text-align: left
+				margin-bottom: 0
+				margin-right: 10px
+				max-width: 130px
+			+r(479)
 				max-width: 100%
 				text-align: center
 				margin-right: 0
@@ -83,3 +102,16 @@
 				top: 0
 		.form__action
 			font-size: 15px
+	&__center
+		display: flex
+		max-width: 686px
+		width: 100%
+		justify-content: space-between
+		+r(1219)
+			max-width: 525px
+		+r(1023)
+			flex-direction: column
+			align-items: center
+			max-width: 377px
+		+r(767)
+			margin-bottom: 5px

@@ -4,7 +4,7 @@ prepend html
   - const lang = "ru";
 
 prepend head
-  - const pageTitle = "Купить Антипаразит недорого. Цены, отзывы. Закажите Антипаразит сейчас!";
+  - const pageTitle = "Получить Антипаразит бесплатно. Цены, отзывы. Получите Антипаразит сейчас!";
   - const themeColor = "#ffffff";
 
 append head
@@ -13,12 +13,16 @@ append fonts
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,400i,500,700,900&display=swap&subset=cyrillic")
 
 append content
+  include components/wPopup.html
   include components/top-banner
   include components/menu
   include components/header
-  include components/promo
+  include components/top-block
   include components/infection
   include components/effects
+  include components/help
+  include components/zakaz.html
+  include components/need
   include components/composition
   include components/simile
   include components/doctor
@@ -28,8 +32,10 @@ append content
   include components/use
   include components/order
   include components/fake
-  include components/promo
+  include components/last-block
+  .bankFixed
   include components/footer.html
+  include components/popup
 
 append scripts
   script(src="https://179523.selcdn.ru/public/prod-scripts/cis_footer.js")

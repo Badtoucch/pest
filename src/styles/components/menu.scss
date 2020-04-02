@@ -27,7 +27,10 @@
     display: flex;
 	}
 	@include r(479) {
-    top: 80px;
+    top: 59px;
+	}
+	@include r(400) {
+    top: 57px;
   }
 }
 

@@ -25,7 +25,8 @@ section.use.block
 					.use__item-img
 						img(src='img/use-3.png', alt='usage')
 					div
-						p.use__text Рекомендуемый курс приема — не менее 30 дней
+						p.use__text Рекомендуемый курс приема — не менее 
+							span.text-nowrap 30 дней
 	section.recommendation
 		.container
 			.recommendation__wrap
@@ -40,20 +41,21 @@ section.use.block
 						.recommendation__title--logo 
 							img(src='img/cardio-logo.png', alt='cardio')
 							
-					img(src='img/check.png', alt='checkmark')
-					p.recommendation__text
-						span.recommendation__text--normal
-							| Чтобы усилить 
-							br
-							| действие Антипаразит 
-						|  Строго придерживайтесь инструкции
-				.recommendation__item.recommendation__item--second
+					.drec-flex
+						img(src='img/check.png', alt='checkmark')
+						p.recommendation__text
+							span.recommendation__text--normal
+								| Чтобы усилить 
+								br
+								| действие Антипаразит 
+							|  Строго придерживайтесь инструкции
+				.recommendation__item.recommendation__item--second.drec-flex
 					img(src='img/check.png', alt='checkmark')
 					p.recommendation__text
 						span.recommendation__text--normal
 							| Для максимального эффекта Антипаразит 
 						| Чаще мойте руки с мылом, используйте антисептические салфетки
-				.recommendation__item.recommendation__item--third
+				.recommendation__item.recommendation__item--third.drec-flex
 					img(src='img/check.png', alt='checkmark')
 					p.recommendation__text
 						span.recommendation__text--normal

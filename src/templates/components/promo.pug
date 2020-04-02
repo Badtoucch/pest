@@ -1,22 +1,23 @@
-section.promo
-	.container
-		.promo-content
-			.promo-product
-				.promo-product__pack
-					img(src="img/pack.png", alt="product")
-			.promo__info
-				h1.promo__title.title Антипаразит
-				h2.promo__subtitle очищает организм 
-					span.text-nowrap от паразитов 
-					| и укрепляет иммунитет
-				ul.promo-list
-					li.promo-list__item Убивает 
-						span.promo-list__item--small все виды паразитов
-					li.promo-list__item Выводит 
-						span.promo-list__item--small яды и токсины 
-					li.promo-list__item Защищает 
-						span.promo-list__item--small от повторного заражения 
-				.promo__quality 
-					img(src="img/quality.png", alt="quality")
-			.promo__form
-				include form
+.container
+	.promo-content
+		.promo-product
+			.promo-product__pack
+				img(src="img/pack.png", alt="product")
+			.promo__quality.promo-product__quality
+				img(src="img/quality.png", alt="quality")
+		.promo__info
+			h1.promo__title.title Антипаразит
+			h2.promo__subtitle очищает организм 
+				span.text-nowrap от паразитов 
+				| и укрепляет иммунитет
+			ul.promo-list
+				li.promo-list__item Убивает 
+					span.promo-list__item--small все виды паразитов
+				li.promo-list__item Выводит 
+					span.promo-list__item--small яды и токсины 
+				li.promo-list__item Защищает 
+					span.promo-list__item--small от повторного заражения 
+			.promo__quality 
+				img(src="img/quality.png", alt="quality")
+		.promo__form
+			include form

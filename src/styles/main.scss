@@ -3,6 +3,7 @@
 // библиотеки
 @import "libs/index";
 // компоненты
+@import "components/wPopup";
 @import "components/top-banner";
 @import "components/timer";
 @import "components/btn";
@@ -10,6 +11,9 @@
 @import "components/header";
 @import "components/promo";
 @import "components/effects";
+@import "components/help";
+@import "components/zakaz";
+@import "components/need";
 @import "components/infection";
 @import "components/composition";
 @import "components/simile";
@@ -22,5 +26,6 @@
 @import "components/fake";
 @import "components/footer";
 @import "components/form";
+@import "components/popup";
 // паддинг секций (импортируем последним для правильного каскадирования стилей)
 @import "settings/padding";

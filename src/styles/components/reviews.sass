@@ -27,25 +27,41 @@
 		+r(1023)
 			padding-top: 25px
 		+r(767)
-			padding-bottom: 15px
+			padding-bottom: 20px
 		+r(639)
 			height: 100%
 			margin-bottom: 0
+			padding: 15px
 		&__img
 			margin-right: 21px
+			+r(639)
+				margin-right: 0
+				margin-bottom: 5px
 			img
 				border-radius: 50%
+		&-info
+			+r(639)
+				text-align: center
 		&-top
 			display: flex
 			align-items: center
+			+r(639)
+				flex-direction: column
+				align-items: center
 		&__name
 			color: #353434
 			font-size: 22px
 			font-weight: 700
+			+r(639)
+				display: inline
+				font-size: 19px
+				margin-right: 5px
 		&__age
 			margin-top: 5px
 			font-size: 17px
 			font-weight: 500
+			+r(639)
+				display: inline
 		&__text
 			margin-top: 27px
 			color: #666666
@@ -54,15 +70,31 @@
 			overflow: hidden
 			max-height: 210px
 			transition: .2s
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 150px
+				bottom: 0
+				left: 0
+				opacity: 1
+				transition: opacity 1s
+				background-image: linear-gradient(to top,#f8f8f8 0%,rgba(255,255,255,0) 100%)
+				+r(639)
+					display: none
 			+r(1219)
 				max-height: 260px
+				letter-spacing: -0.2px
 			+r(1023)
 				max-height: 205px
 			+r(767)
 				max-height: 264px
-				letter-spacing: -0.1px
+				line-height: 24px
 			+r(639)
 				max-height: 800px
+				margin-top: 10px
+				line-height: 1.3
 		&__btn
 			width: 30px
 			height: 30px
@@ -161,30 +193,208 @@
 		transform: translateY(-50%)
 		+r(1330)
 			transform: none
-			top: 100px
+			top: 85px
 			z-index: 5
+			width: 40px
+			height: 40px
+			&:hover
+				fill: #8ec030 !important
 		+r(1023)
-			top: 95px
+			top: 82px
+			width: 40px
+			height: 40px
+			&:hover
+				fill: #fff !important
+		+r(639)
+			top: 78px
+		
 	.arrow-right
 		+r(1330)
-			right: 10px
+			right: -16px
+		+r(1023)
+			right: -5px
 	.arrow-left
 		+r(1330)
-			left: 10px
+			left: -16px
+		+r(1023)
+			left: -5px
 .text-open
 	.reviews-item__text
 		max-height: 800px
+		&::before
+			opacity: 0
 	.reviews-item__btn::after
 		opacity: 0
 .rev--full
 	height: 381px
+	.reviews-item__text:before
+		display: none
 	+r(1219)
 		height: 431px
 	+r(1023)
 		height: 371px
 	+r(767)
-		height: 401px
+		height: 406px
 	+r(639)
 		height: auto
 	.reviews-item__btn
 		display: none
+.audiojs .loaded
+	width: 100% !important
+.reviews
+	&__feedback
+		max-width: 400px
+		margin: 30px auto 0
+		display: none
+		+r(767)
+			margin-top: 25px
+		+r(479)
+			margin-top: 20px
+.feedback
+	&__title
+		text-align: center
+		font-size: 40px
+		font-weight: bold
+		margin-bottom: 20px
+		+r(1023)
+			font-size: 32px
+			margin-bottom: 15px
+		+r(479)
+			font-size: 22px
+			margin-bottom: 10px
+.reviews .feedback__input
+	margin-bottom: 15px
+	font-family: 'Roboto',sans-serif
+	font-size: 17px
+	font-weight: 300
+	outline: 0
+	border: 1px solid #dfe2e3
+	border-radius: 10px
+	padding: 11px 15px 11px 48px
+	width: 100%
+	position: relative
+.reviews .feedback__icon--name::before
+	content: ''
+	width: 15px
+	position: absolute
+	height: 19px
+	background: url(../img/reviews-name.png) no-repeat center/contain
+	top: 0px
+	left: 20px
+	z-index: 1
+.reviews .feedback__icon--age::before
+	content: ''
+	width: 15px
+	position: absolute
+	height: 16px
+	background: url(../img/calendar.svg) no-repeat center/contain
+	top: 0px
+	left: 20px
+	z-index: 1
+.feedback__icon
+	position: relative
+.reviews .feedback__icon--message::before
+	width: 17px
+	height: 18px
+	background: url(../img/reviews-message.png) no-repeat center/contain
+	top: 15px
+	left: 20px
+	content: ''
+	position: absolute
+	z-index: 1
+.reviews .modal
+	display: none;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background: rgba(255,255,255,.6);
+	padding: 0 20px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+.reviews .modal__wrapper 
+	background: #fff;
+	max-width: 450px;
+	width: 100%;
+	height: 150px;
+	-webkit-box-shadow: 0 0 11px 8px rgba(0,0,0,.2);
+	box-shadow: 0 0 11px 8px rgba(0,0,0,.2);
+	border-radius: 8px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+.reviews .modal__text 
+	font-size: 20px;
+	text-align: center;
+	line-height: 25px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+.reviews .modal__text span 
+	font-size: 24px;
+	display: block
+.reviews .modal--show, .reviews .modal__text, .reviews .modal__wrapper
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+.feedback--show
+	display: block
+
+
+
+
+@media (max-width: 1330px) and (min-width: 640px)
+	.reviews .arrow-left, .reviews .arrow-right
+		width: 45px !important
+		height: 28px !important
+		padding: 0 !important
+		background: none !important
+		top: auto !important
+		bottom: -51px !important
+	.reviews .arrow-left
+		left: 400px !important
+	.reviews .arrow-right
+		right: 400px  !important
+@media (max-width: 1330px) and (min-width: 1024px)
+	.reviews .arrow-left
+		left: 300px !important
+	.reviews .arrow-right
+		right: 300px  !important
+.hide-767
+	+r(767)
+		display: none
+.hide-767--text:before
+	+r(767)
+		display: none
+@media (max-width: 1023px) and (min-width: 768px)
+	.reviews .arrow-left
+		left: 150px !important
+	.reviews .arrow-right
+		right: 150px  !important
+@media (max-width: 767px) and (min-width: 640px)
+	.reviews .arrow-left
+		left: 70px !important
+		bottom: -42px!important
+	.reviews .arrow-right
+		right: 70px  !important
+		bottom: -42px!important

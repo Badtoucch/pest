@@ -28,7 +28,7 @@
 				width: 41%
 			+r(639)
 				width: 100%
-				max-width: 240px
+				max-width: 215px
 			&:last-child 
 				margin-right: 0
 		&__title
@@ -141,10 +141,13 @@ iframe
 	width: 100%
 	background: none
 	+r(1219)
-		max-width: 228px
+		max-width: 226px	
+	+r(639)
+		max-width: 196px
 	.audiojs audio 
 		position: absolute
 		left: -1px
+		max-width: 197px	
 
 
 .audiojs, .loaded, .play-pause, .progress, .scrubber
@@ -178,6 +181,8 @@ iframe
 	position: relative
 	width: 100%
 	max-width: 270px
+	+r(1219)
+		max-width: 134px
 .audiojs .loaded, .audiojs .scrubber 
 	background: #d3d3d3 !important
 .loaded, .progress, .scrubber 
@@ -209,10 +214,12 @@ iframe
 		transform: translateY(-50%)
 		z-index: -1
 	+r(1219)
-		width: 134px
+		width: 132px
 		margin: 0 10px
 	+r(1023)
 		width: 124px
+	+r(639)
+		width: 100px
 .audiojs .play-pause
 	width: 15px 
 	height: 26px

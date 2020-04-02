@@ -18,7 +18,8 @@
         }
 
         @include r(1023) {
-            flex-wrap: wrap;
+						flex-wrap: wrap;
+						margin: 30px 0;
         }
 
         @include r(767) {
@@ -45,25 +46,28 @@
         }
 
         @include r(1023) {
-            max-width: 365px;
+            max-width: 242px;
             margin: 0 0 15px;
-
+						padding: 10px;
             &:last-child{
-                margin: 0 auto;
+              
             }
         }
 
         @include r(767) {
             max-width: 300px;
-            padding: 15px;
+						padding: 15px;
+						&:last-child{
+							margin: 0 auto;
+					}
         }
 
         @include r(639) {
             max-width: 360px;
 
             &:last-child{
-                margin: 0;
-            }
+							margin: 0 ;
+					}
         }
 
         &-title{
@@ -72,8 +76,12 @@
             padding-left: 20px;
             margin: 24px 0 20px;
 
-            @include r(1219) {
-                line-height: 24px;
+            @include r(1023) {
+								line-height: normal;
+								padding-left: 0;
+								font-size: 18px;
+								margin: 12px 0;
+								text-align: center;
             }
 
             @include r(767) {
@@ -89,7 +97,11 @@
 
         &-option {
             padding-left: 20px;
-
+						@include r(1023) {
+				
+							padding-left: 0;
+					
+					}
             @include r(767) {
                 padding-left: 10px;
             }
@@ -100,10 +112,16 @@
                 line-height: 22px;
                 position: relative;
                 padding-left: 30px;
-
+								@include r(1023) {
+									font-size: 17px;
+									line-height: normal;
+									padding-left: 20px;
+							}
                 &:not(:last-child){
                     margin-bottom: 20px;
-
+										@include r(1023) {
+										margin-bottom: 10px;
+									}
                     @include r(479) {
                         margin-bottom: 10px;
                     }

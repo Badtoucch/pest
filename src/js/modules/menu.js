@@ -27,5 +27,13 @@ export default () => {
     if (e.target == overlay) {
       closeMenu();
     }
-  })
+	})
+	$('.info__text').click(function() {
+		closeMenu();
+	});
+	$('.menu__btn').click(function() {
+		closeMenu();
+	});
+
+	
 };

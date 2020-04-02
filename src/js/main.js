@@ -6,6 +6,7 @@ import infection from "./modules/infection.js";
 import people from "./modules/people.js";
 import reviews from "./modules/reviews.js";
 import footer from "./modules/footer.js";
+import wPopup from "./modules/wPopup.js";
 
 function main() {
 	people();
@@ -13,6 +14,7 @@ function main() {
 	footer();
 	infection();
 	reviews();
+	wPopup();
 }
 
 main();

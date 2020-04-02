@@ -14,7 +14,7 @@ z-index: 5;
 
     @include r(1023) {
      
-      justify-content: space-around;
+      
     }
 
     @include r(639) {
@@ -53,10 +53,18 @@ line-height: 1;
   @include r(1219) {
 		margin-right: 0;
 		font-size: 24px;
+	}
+	
+  @include r(1023) {
+	padding-left: 60px;
   }
-
+	
+  @include r(639) {
+		padding-left: 30px;
+		}
   @include r(479) {
-    margin-bottom: 10px;
+		margin-bottom: 0px;
+		padding-left: 0;
   }
 }
 
@@ -72,7 +80,8 @@ line-height: 1;
     margin-left: 10px;
 	}
 	@include r(479) {
-    margin-left: 0px;
+		margin-left: 0px;
+		display: none;
   }
 }
 

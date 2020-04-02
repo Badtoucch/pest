@@ -60,4 +60,56 @@ export default () => {
 			}
 		]
 	});
+
+	const modal = $('.reviews .modal');
+	
+	$('.reviews__btn').on('click', () => {
+    $('.reviews__feedback').toggleClass('feedback--show')
+  });
+
+  $('.reviews__feedback').on('submit', (e) => {
+    e.preventDefault();
+    modal.addClass('modal--show');
+    $('.reviews__feedback').removeClass('feedback--show');
+    setTimeout(() => {
+      modal.removeClass('modal--show')
+    }, 3000)
+    $('.reviews__feedback input').val('');
+		$('.reviews__feedback textarea').val('');
+		$('.feedback__icon--age input').val('');
+		var loadText = inputLoad.data('text');
+		inputLoad.text("".concat(''));
+		inputPhoto.css('background', "url(\"".concat(cdn_path + 'img/photo.png', "\") no-repeat center"));
+
+	});
+	
+	$('.info__link').on( 'click', function(){ 
+    var el = $(this);
+    var dest = el.attr('href'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+        $('html').animate({ 
+            scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+        }, 500 // скорость прокрутки
+        );
+    }
+    return false;
+});
+var inputFile = $('.js-input-file');
+      var inputPhoto = $('.js-photo');
+      var inputLoad = $('.js-load');
+function loadImage() {
+	inputFile.change(function (e) {
+		var file = e.target.files[0];
+
+		if (!file) {
+			return;
+		}
+		var urlFile = window.URL.createObjectURL(file);
+		var loadText = inputLoad.data('text');
+		inputLoad.text("".concat(loadText));
+		inputPhoto.css('background', "url(\"".concat(urlFile, "\") no-repeat center"));
+		inputPhoto.css('backgroundSize', 'cover');
+	});
+}
+loadImage();
 };

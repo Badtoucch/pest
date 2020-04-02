@@ -13,10 +13,18 @@
     &__image{
         position: absolute;
         top: -36px;
-        right: -35px;
+				right: -35px;
 				@include r(1245) {
 					right: -18px;
 			}
+				@include r(1023) {
+					width: 65px;
+					height: 65px;
+					right: -10px;
+					top: -15px;
+
+			}
+			
         @include r(479) {
             right: -20px;
         }
@@ -31,7 +39,11 @@
         font-size: 21px;
         font-weight: 700;
         line-height: 24.59px;
-        letter-spacing: -0.85px;
+				letter-spacing: -0.85px;
+				@include r(1023) {
+					font-size: 17px;
+
+			}
     }
 
     &__title{

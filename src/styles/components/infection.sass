@@ -1,17 +1,24 @@
 .infection
 	padding: 171px 0 94px
+	+rm(1024)
+		padding-top: 100px !important
+	+rm(1220)
+		padding-top: 170px !important
 	&-list
 		margin-top: 51px
 		+r(1219)
-			margin-top: 40px	
+			margin-top: 30px	
 		+r(1023)
-			margin-top: 30px
-		+r(479)
 			margin-top: 20px
+		+r(479)
+			margin-top: 10px
 	&-item
 		margin: 16px 15px 0
 		+r(1219)
 			margin: 16px 10px
+		+r(1023)
+			margin-left: 5px
+			margin-right: 5px
 		&__img
 			max-width: 270px
 			position: relative
@@ -89,26 +96,46 @@
 	transition: .2s
 	position: absolute
 	cursor: pointer
-	top: 137px
+	top: 130px
 	+r(1330)
-		top: -20px
-	+r(479)
-		top: 130px
-	+r(400)
-		top: 110px
-	+r(360)
+		background: #729d22
+		padding: 10px
+		height: 46px
+		width: 46px
+		border-radius: 50%
+		z-index: 1
+		top: 120px
+	+r(1219)
+		top: 105px
+	+r(767)
+		top: 115px
+	+r(639)
 		top: 100px
+	+r(479)
+		top: 115px
+	+r(400)
+		top: 100px
+	+r(360)
+		top: 85px
 	&:hover
 		fill: #729d22
+		+r(1330)
+			fill: #fff
 .arrow-left
 	left: -70px
 	+r(1330)
-		left: 0
+		left: -18px
+	+r(1023)
+		left: -5px
 .arrow-right
 	right: -70px
 	+r(1330)
-		right: 0
+		right: -18px
+	+r(1023)
+		right: -5px
 .slick-list
 	margin: 0 -15px
 	+r(1219)
 		margin: 0 -10px
+	+r(1023)
+		margin: 0 -5px
